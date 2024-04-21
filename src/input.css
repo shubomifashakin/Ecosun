@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply transition-colors duration-500 ease-in-out hover:text-secondaryGreen active:text-secondaryGreen;
+  }
+
+  .secondary-btn {
+    @apply flex items-center gap-x-2 rounded-3xl border border-borderColor bg-secondaryGreen px-4 py-3 capitalize text-primaryBlue transition-colors duration-500 ease-in-out hover:border-primaryBlue;
+  }
+
+  .summary-style {
+    @apply flex cursor-pointer list-none items-center justify-between border-b px-2 py-6 text-xl font-medium text-primaryBlue;
+  }
+
+  .summary-icon {
+    @apply flex h-10 w-10 items-center justify-center rounded-full transition-all duration-500 ease-in-out group-open:bg-secondaryGreen group-hover:bg-secondaryGreen group-active:bg-secondaryGreen;
+  }
+
+  .summary-header {
+    @apply border-b border-l-2 border-l-primaryBlue bg-backgroundColor p-10 text-stone-500 transition-all duration-500 ease-in-out;
+  }
+
+  .section-style {
+    @apply gap-3 overflow-hidden bg-white px-6 py-10 lg:px-12 lg:py-20;
+  }
+
+  .catalog-item {
+    @apply h-full w-52 flex-shrink-0 rounded-md border border-[#f0f1e8] transition-all  duration-500 ease-in-out hover:border-stone-400 hover:bg-[#f0f1e8] active:border-stone-400 active:bg-[#f0f1e8];
+  }
+
+  .product-desc {
+    @apply flex justify-between px-2 py-4 text-sm;
+  }
+
+  .dot{
+    @apply inline-block h-2 w-2 cursor-pointer rounded-full bg-slate-300 transition-all duration-500 ease-in-out hover:bg-slate-500
+  }
+}
