@@ -113,7 +113,7 @@ class Page {
     //scroll associated element into view
     this.testimonialCustomers
       .querySelector(`#article-${this.currentTestimonialInView}`)
-      .scrollIntoView({ behavior: "smooth" });
+      .scroll({ behavior: "auto" });
 
     //color the associated dot
     this.testimonialDots.forEach((c, i) => {

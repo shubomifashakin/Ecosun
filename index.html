@@ -534,7 +534,7 @@
 
       <section
         id="testimonial"
-        class="relative flex w-full items-end justify-between overflow-hidden px-48 py-40 text-primaryBlue"
+        class="relative flex w-full items-end justify-between px-48 py-64 text-primaryBlue"
       >
         <article id="testimonial-info" class="flex basis-3/4 overflow-hidden">
           <div id="article-1" class="w-full flex-shrink-0">
@@ -723,11 +723,184 @@
         </div>
 
         <div
-          class="absolute left-[10%] top-[15%] flex h-8 w-8 items-center justify-center bg-red-500 text-3xl"
+          class="absolute left-[8%] top-[30%] flex h-10 w-10 items-center justify-center rounded-full bg-white text-3xl"
         >
-          ''
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.96777 2.51465C4.02441 2.69238 3.36133 3.37598 2.97852 4.56543C2.78711 5.15332 2.69141 5.73438 2.69141 6.30859C2.69141 6.37695 2.69141 6.43848 2.69141 6.49316C2.70508 6.53418 2.71875 6.63672 2.73242 6.80078H4.96777V11.2715H0.599609V7.14941C0.599609 5.12598 1.00293 3.56738 1.80957 2.47363C2.61621 1.37988 3.66895 0.750977 4.96777 0.586914V2.51465ZM11.8789 2.51465C11.127 2.6377 10.5527 3.06152 10.1562 3.78613C9.77344 4.51074 9.58203 5.34473 9.58203 6.28809C9.58203 6.37012 9.58203 6.45215 9.58203 6.53418C9.5957 6.61621 9.61621 6.70508 9.64355 6.80078H11.8789V11.2715H7.49023V7.14941C7.49023 5.52246 7.83203 4.07324 8.51562 2.80176C9.19922 1.5166 10.3203 0.77832 11.8789 0.586914V2.51465Z"
+              fill="#848889"
+            />
+          </svg>
+        </div>
+
+        <div class="pointer-events-none absolute left-[90%] top-0">
+          <svg
+            width="181"
+            height="186"
+            viewBox="0 0 181 186"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M98.0875 0.5V33.3375L65.25 16.8725L98.0875 0.5ZM107.338 56L130 78.755L95.3125 90.3175L107.338 56ZM185.5 87.9125L169.128 120.75L152.662 87.9125H185.5ZM111.5 0.5H185.5V74.5C180.227 76.0725 174.678 76.8125 169.128 76.8125C136.013 76.905 109.095 49.9875 109.002 16.6875C109.095 11.23 109.927 5.7725 111.5 0.5ZM46.75 185.5V130H74.5L28.25 46.75V102.25H0.5L46.75 185.5Z"
+              fill="white"
+              fill-opacity="0.6"
+            />
+          </svg>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-[90%] z-50 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-lg bg-primaryBlue px-8 py-12"
+        >
+          <p class="text-2xl text-white">
+            Experience the Power of Solar.<br />
+            Let's Transform Your Energy Future Together!
+          </p>
+
+          <button id="action-btn" type="button" class="secondary-btn">
+            Let's Go Solar Today
+            <span
+              id="cart-info"
+              class="flex h-7 w-7 items-center justify-center rounded-full bg-primaryBlue text-sm text-white"
+            >
+              <svg
+                width="21"
+                height="8"
+                viewBox="0 0 21 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                  fill="#CAFDC6"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
       </section>
+
+      <footer
+        class="relative w-full space-y-40 overflow-y-clip bg-white px-16 pb-8 pt-40"
+      >
+        <div class="z-30 flex justify-between text-primaryBlue">
+          <p class="basis-1/2">
+            We're dedicated to making solar energy accessible,<br />
+            affordable, and seamless
+          </p>
+
+          <div class="flex gap-x-8">
+            <ul class="space-y-4">
+              <li><h2 class="font-semibold">Links</h2></li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >Home</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >Our Service</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >Shop</a
+                >
+              </li>
+            </ul>
+
+            <ul class="space-y-4">
+              <li><h2 class="font-semibold">Social</h2></li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >Facebook</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >Instagram</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="duration-500 ease-in-out hover:text-secondaryGreen"
+                  >Linked In</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <address class="flex flex-col space-y-4 not-italic">
+            <a
+              href="mailto: Contact@ecosun@email.com"
+              class="duration-500 ease-in-out hover:text-secondaryGreen"
+            >
+              Contact@ecosun.com</a
+            >
+            <a
+              href="tel: (307) 555-0133"
+              class="duration-500 ease-in-out hover:text-secondaryGreen"
+              >(307) 555-0133</a
+            >
+
+            <p>4517 Washington Ave. Manchester, <br />Kentucky 39495</p>
+          </address>
+        </div>
+
+        <div
+          class="relative z-30 flex justify-between bg-transparent capitalize text-primaryBlue"
+        >
+          <p>©All right reserved • Augustine Ifenna</p>
+
+          <p>2023 Terms and condition</p>
+        </div>
+
+        <div class="absolute top-[32%]">
+          <svg
+            width="1434"
+            height="230"
+            viewBox="0 0 1434 230"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.452148 0.22168H235.779V39.7725H43.0791V137.771H221.277V175.124H43.0791V284.548H239.075V323H0.452148V0.22168ZM290.271 0.22168H328.284V187.648L429.798 87.6729H480.335L390.247 175.783L485.389 323H434.852L361.463 204.348L328.284 234.67V323H290.271V0.22168ZM609.534 297.512C635.755 297.512 653.699 287.624 663.367 267.849C673.182 247.927 678.089 225.808 678.089 201.491C678.089 179.519 674.573 161.647 667.542 147.878C656.409 126.198 637.22 115.358 609.974 115.358C585.804 115.358 568.226 124.587 557.239 143.044C546.253 161.501 540.76 183.767 540.76 209.841C540.76 234.89 546.253 255.764 557.239 272.463C568.226 289.162 585.657 297.512 609.534 297.512ZM611.072 80.8613C641.395 80.8613 667.029 90.9688 687.977 111.184C708.924 131.398 719.397 161.135 719.397 200.393C719.397 238.332 710.169 269.68 691.712 294.436C673.255 319.191 644.617 331.569 605.799 331.569C573.426 331.569 547.718 320.656 528.675 298.83C509.632 276.857 500.11 247.414 500.11 210.5C500.11 170.949 510.145 139.455 530.213 116.018C550.281 92.5801 577.234 80.8613 611.072 80.8613ZM790.149 249.172C791.321 262.355 794.617 272.463 800.037 279.494C809.998 292.238 827.283 298.61 851.893 298.61C866.541 298.61 879.432 295.461 890.564 289.162C901.697 282.717 907.264 272.829 907.264 259.499C907.264 249.392 902.796 241.701 893.86 236.428C888.147 233.205 876.868 229.47 860.022 225.222L828.602 217.312C808.533 212.331 793.738 206.765 784.217 200.612C767.225 189.919 758.729 175.124 758.729 156.228C758.729 133.962 766.712 115.944 782.679 102.175C798.792 88.4053 820.398 81.5205 847.498 81.5205C882.947 81.5205 908.509 91.9209 924.183 112.722C933.997 125.905 938.758 140.114 938.465 155.349H901.111C900.379 146.413 897.229 138.283 891.663 130.959C882.581 120.559 866.834 115.358 844.422 115.358C829.48 115.358 818.128 118.215 810.364 123.928C802.747 129.641 798.938 137.185 798.938 146.56C798.938 156.813 803.992 165.017 814.1 171.169C819.959 174.831 828.602 178.054 840.027 180.837L866.175 187.209C894.593 194.094 913.636 200.759 923.304 207.204C938.685 217.312 946.375 233.205 946.375 254.885C946.375 275.832 938.392 293.923 922.425 309.157C906.604 324.392 882.435 332.009 849.915 332.009C814.905 332.009 790.076 324.099 775.428 308.278C760.926 292.312 753.162 272.609 752.137 249.172H790.149ZM1031.19 87.6729V243.898C1031.19 255.91 1033.09 265.725 1036.9 273.342C1043.93 287.404 1057.04 294.436 1076.23 294.436C1103.77 294.436 1122.52 282.131 1132.48 257.521C1137.9 244.338 1140.61 226.247 1140.61 203.249V87.6729H1180.16V323H1142.81L1143.25 288.283C1138.12 297.219 1131.75 304.763 1124.13 310.915C1109.05 323.22 1090.74 329.372 1069.2 329.372C1035.66 329.372 1012.81 318.166 1000.65 295.754C994.056 283.742 990.76 267.702 990.76 247.634V87.6729H1031.19ZM1242.13 87.6729H1279.7V121.071C1290.83 107.302 1302.62 97.4141 1315.08 91.4082C1327.53 85.4023 1341.37 82.3994 1356.6 82.3994C1390 82.3994 1412.56 94.0449 1424.28 117.336C1430.73 130.08 1433.95 148.317 1433.95 172.048V323H1393.74V174.685C1393.74 160.329 1391.61 148.757 1387.37 139.968C1380.33 125.319 1367.59 117.995 1349.13 117.995C1339.76 117.995 1332.07 118.947 1326.06 120.852C1315.22 124.074 1305.7 130.52 1297.5 140.188C1290.91 147.951 1286.58 156.008 1284.53 164.357C1282.63 172.561 1281.68 184.353 1281.68 199.733V323H1242.13V87.6729Z"
+              fill="#F0F1E6"
+            />
+          </svg>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
