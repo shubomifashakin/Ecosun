@@ -55,7 +55,7 @@ class Page {
       dot.addEventListener("click", (e) => {
         this.testimonialCustomers
           .querySelector(`#article-${e.target.dataset.articleNo}`)
-          .scrollIntoView({ behavior: "smooth" });
+          .scrollIntoView({ behavior: "instant" });
 
         //add the active class to the dot clicked
         dot.classList.add("bg-primaryBlue");
@@ -113,7 +113,7 @@ class Page {
     //scroll associated element into view
     this.testimonialCustomers
       .querySelector(`#article-${this.currentTestimonialInView}`)
-      .scroll({ behavior: "auto" });
+      .scrollIntoView({ behavior: "instant" });
 
     //color the associated dot
     this.testimonialDots.forEach((c, i) => {
