@@ -26,7 +26,7 @@
 
     <title>Ecosun</title>
   </head>
-  <body class="overflow-hidden">
+  <body>
     <div id="app" class="bg-backgroundColor">
       <nav
         id="navbar"
@@ -534,7 +534,7 @@
 
       <section
         id="testimonial"
-        class="relative flex w-full items-end justify-between overflow-hidden px-48 py-40 text-primaryBlue"
+        class="relative flex w-full items-end justify-between px-48 py-72 text-primaryBlue"
       >
         <article id="testimonial-info" class="flex basis-3/4 overflow-hidden">
           <div id="article-1" class="w-full flex-shrink-0">
@@ -723,11 +723,92 @@
         </div>
 
         <div
-          class="absolute left-[10%] top-[15%] flex h-8 w-8 items-center justify-center bg-red-500 text-3xl"
+          class="absolute left-[10%] top-[20%] flex h-12 w-12 items-center justify-center rounded-full bg-white text-3xl"
         >
-          ''
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.96777 2.51465C4.02441 2.69238 3.36133 3.37598 2.97852 4.56543C2.78711 5.15332 2.69141 5.73438 2.69141 6.30859C2.69141 6.37695 2.69141 6.43848 2.69141 6.49316C2.70508 6.53418 2.71875 6.63672 2.73242 6.80078H4.96777V11.2715H0.599609V7.14941C0.599609 5.12598 1.00293 3.56738 1.80957 2.47363C2.61621 1.37988 3.66895 0.750977 4.96777 0.586914V2.51465ZM11.8789 2.51465C11.127 2.6377 10.5527 3.06152 10.1562 3.78613C9.77344 4.51074 9.58203 5.34473 9.58203 6.28809C9.58203 6.37012 9.58203 6.45215 9.58203 6.53418C9.5957 6.61621 9.61621 6.70508 9.64355 6.80078H11.8789V11.2715H7.49023V7.14941C7.49023 5.52246 7.83203 4.07324 8.51562 2.80176C9.19922 1.5166 10.3203 0.77832 11.8789 0.586914V2.51465Z"
+              fill="#848889"
+            />
+          </svg>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-[87.5%] flex w-[90%] -translate-x-1/2 items-center justify-between rounded-lg bg-primaryBlue px-10 py-16"
+        >
+          <p class="text-2xl text-white">
+            Experience the Power of Solar.<br />
+            Let's Transform Your Energy Future Together!
+          </p>
+
+          <button
+            id="action-btn"
+            type="button"
+            class="secondary-btn rounded-full"
+          >
+            Let's Go Solar Today
+            <span
+              id="cart-info"
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-primaryBlue text-sm text-white"
+            >
+              <svg
+                width="21"
+                height="8"
+                viewBox="0 0 21 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z"
+                  fill="#CAFDC6"
+                />
+              </svg>
+            </span>
+          </button>
         </div>
       </section>
+
+      <footer
+        class="relative flex h-dvh w-full flex-col justify-between bg-white px-16 pb-8 pt-32"
+      >
+        <div class="flex items-start justify-between">
+          <div>hello</div>
+
+          <div class="flex gap-x-16">
+            <ul class="space-y-2">
+              <li><h1>Links</h1></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Shop</a></li>
+            </ul>
+
+            <ul class="space-y-2">
+              <li><h1>Socials</h1></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Linked In</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="#">contact@email.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <span>Hello</span>
+          <span>2023&copy;</span>
+        </div>
+
+        <p class="absolute top-3/4 text-9xl font-semibold">EKOSUN</p>
+      </footer>
     </div>
   </body>
 </html>
