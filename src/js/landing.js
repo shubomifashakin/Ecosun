@@ -1,6 +1,9 @@
 import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
-const lenis = new Lenis({ duration: 4 });
+const lenis = new Lenis({ duration: 5 });
 
 function raf(time) {
   lenis.raf(time);
@@ -10,8 +13,22 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 class Page {
+  fadeInElements = document.querySelectorAll(".fadeIn");
+
+  navbar = document.querySelector("#navbar");
+  heroSection = document.querySelector("#hero");
+
+  missionArticle = document.querySelector("#mission");
+
+  stats = document.querySelector("#stats");
+
   servicesSect = document.querySelector("#services");
   summaries = this.servicesSect.querySelector("#summaries");
+
+  shopSect = document.querySelector("#shop");
+  productCatalog = this.shopSect.querySelector("#product-catalog");
+  catalogLeftArrow = this.shopSect.querySelector("#scroll-left-btn");
+  catalogRightArrow = this.shopSect.querySelector("#scroll-right-btn");
 
   testimonialSect = document.querySelector("#testimonial");
   testimonialCustomers =
@@ -20,11 +37,6 @@ class Page {
   testimonialLeftArrow = this.testimonialSect.querySelector(".l-arrow");
   testimonialRightArrow = this.testimonialSect.querySelector(".r-arrow");
   currentTestimonialInView = 1;
-
-  shopSect = document.querySelector("#shop");
-  productCatalog = this.shopSect.querySelector("#product-catalog");
-  catalogLeftArrow = this.shopSect.querySelector("#scroll-left-btn");
-  catalogRightArrow = this.shopSect.querySelector("#scroll-right-btn");
 
   constructor() {
     //scroll right every 3 seconds
@@ -95,6 +107,12 @@ class Page {
       "click",
       this.scrollTestimonial.bind(this, "left"),
     );
+
+    this.heroAnim();
+
+    this.fadeInElements.forEach((c) => {
+      this.fadeIn(c);
+    });
   }
 
   scrollCatalog(dir) {
@@ -163,6 +181,37 @@ class Page {
       this.currentTestimonialInView === i + 1
         ? c.classList.add("bg-primaryBlue")
         : c.classList.remove("bg-primaryBlue");
+    });
+  }
+
+  heroAnim() {
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+      const timeline = gsap.timeline({ defaults: { duration: 1.5 } });
+
+      timeline
+        .from(this.navbar, { y: -50, opacity: 0 })
+        .from([...this.heroSection.children], {
+          opacity: 0,
+          stagger: 1,
+        });
+    });
+  }
+
+  fadeIn(element) {
+    gsap.from(element, {
+      opacity: 0,
+      scale: 0,
+      duration: 2,
+      ease: "power1.inOut",
+
+      scrollTrigger: {
+        trigger: element,
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: 3,
+      },
     });
   }
 }

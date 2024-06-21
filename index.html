@@ -116,13 +116,11 @@
         </div>
       </nav>
 
-      <section class="relative w-full px-6">
-        <div
-          class="aspect-[1.5/1] w-full overflow-hidden rounded-2xl object-cover"
-        >
+      <section id="hero" class="relative px-6">
+        <div class="h-full w-full overflow-hidden rounded-2xl object-cover">
           <img
             src="/images/hero.webp"
-            class="h-full w-full object-cover brightness-[75%]"
+            class="aspect-[1.5/1] object-cover brightness-[75%]"
             alt="Solar Panels"
           />
         </div>
@@ -166,7 +164,10 @@
         </div>
       </section>
 
-      <article id="mission" class="px-12 py-16 lg:py-32 lg:pl-48">
+      <article
+        id="mission"
+        class="fadeIn origin-bottom px-12 py-16 lg:py-32 lg:pl-48"
+      >
         <h1 class="text-2xl font-medium text-primaryBlue lg:text-4xl">
           We're dedicated to making solar<br />
           energy accessible, afforadable,and<br />
@@ -175,7 +176,7 @@
         </h1>
       </article>
 
-      <div id="stats" class="p-8">
+      <div id="stats" class="fadeIn p-8">
         <div
           class="col flex flex-wrap items-center justify-center gap-6 border-t p-8 text-primaryBlue lg:justify-between"
         >
@@ -208,7 +209,7 @@
 
       <section id="services" class="section-style">
         <div
-          class="mb-16 flex flex-wrap items-end justify-between gap-6 text-primaryBlue"
+          class="fadeIn mb-16 flex flex-wrap items-end justify-between text-primaryBlue"
         >
           <div>
             <p class="section-label">SERVICE</p>
@@ -225,7 +226,7 @@
           </p>
         </div>
 
-        <div class="flex items-end justify-between gap-16">
+        <div class="fadeIn flex items-end justify-between gap-x-16">
           <div id="summaries" class="basis-1/2 space-y-6">
             <details class="group">
               <summary class="summary-style">
@@ -334,12 +335,12 @@
           </div>
 
           <div class="basis-1/2">
-            <div class="aspect-[1.1/1] w-full">
+            <div class="h-full w-full">
               <img
                 alt="our services"
                 src="/images/Service-img.webp"
                 loading="lazy"
-                class="h-full w-full object-cover"
+                class="aspect-[1.1/1] object-cover"
               />
             </div>
           </div>
@@ -347,7 +348,9 @@
       </section>
 
       <section id="shop" class="section-style">
-        <div class="mb-16 flex items-end justify-between text-primaryBlue">
+        <div
+          class="fadeIn mb-16 flex items-end justify-between text-primaryBlue"
+        >
           <div>
             <p class="section-label">SHOP</p>
 
@@ -402,14 +405,14 @@
 
         <div
           id="product-catalog"
-          class="flex h-52 flex-shrink-0 gap-x-8 overflow-hidden"
+          class="fadeIn flex h-52 flex-shrink-0 gap-x-8 overflow-hidden"
         >
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Panel.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -424,10 +427,10 @@
 
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Frame 29.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -442,10 +445,10 @@
 
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Frame 27.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -460,10 +463,10 @@
 
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Panel.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -478,10 +481,10 @@
 
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Frame 29.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -496,10 +499,10 @@
 
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Frame 27.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -514,10 +517,10 @@
 
           <div class="catalog-item">
             <a href="#" role="link">
-              <div class="aspect-[1.36/1] w-full">
+              <div class="w-full">
                 <img
                   src="/images/Panel.webp"
-                  class="h-full w-full object-fill"
+                  class="aspect-[1.36/1] object-fill"
                   loading="lazy"
                   alt="solar panel"
                 />
@@ -536,9 +539,12 @@
         id="testimonial"
         class="relative flex w-full items-end justify-between px-48 py-64 text-primaryBlue"
       >
-        <article id="testimonial-info" class="flex basis-3/4 overflow-hidden">
+        <article
+          id="testimonial-info"
+          class="fadeIn flex basis-3/4 overflow-hidden"
+        >
           <div id="article-1" class="article-style">
-            <h1 class="mb-5 text-2xl font-medium">
+            <h1 class="article-header">
               Switching to solar with this team was a smart move.<br />
               The seamless installation process and ongoing<br />
               support exceeded my expectations. Our energy bills<br />
@@ -546,21 +552,21 @@
               more sustainable future.
             </h1>
 
-            <div class="flex items-center gap-5">
-              <div class="aspect-square h-16">
+            <div class="article-image-details">
+              <div class="article-image-container">
                 <img
                   src="/images/Ellipse 2.webp"
-                  class="h-full w-full"
+                  class="article-image"
                   alt="customers image"
                 />
               </div>
 
-              <p class="customers-name text-sm">Robert Fox</p>
+              <p class="article-customers-name">Robert Fox</p>
             </div>
           </div>
 
           <div id="article-2" class="article-style">
-            <h1 class="mb-5 text-2xl font-medium">
+            <h1 class="article-header">
               Switching to solar with this team was a smart move.<br />
               The seamless installation process and ongoing<br />
               support exceeded my expectations. Our energy bills<br />
@@ -568,21 +574,21 @@
               more sustainable future.
             </h1>
 
-            <div class="flex items-center gap-5">
-              <div class="aspect-square h-16">
+            <div class="article-image-container">
+              <div class="article-image-container">
                 <img
                   src="/images/Ellipse 2.webp"
-                  class="h-full w-full"
+                  class="article-image"
                   alt="customers image"
                 />
               </div>
 
-              <p class="customers-name text-sm">Robert Fox</p>
+              <p class="article-customers-name">Robert Fox</p>
             </div>
           </div>
 
           <div id="article-3" class="article-style">
-            <h1 class="mb-5 text-2xl font-medium">
+            <h1 class="article-header">
               Switching to solar with this team was a smart move.<br />
               The seamless installation process and ongoing<br />
               support exceeded my expectations. Our energy bills<br />
@@ -590,21 +596,21 @@
               more sustainable future.
             </h1>
 
-            <div class="flex items-center gap-5">
-              <div class="aspect-square h-16">
+            <div class="article-image-container">
+              <div class="article-image-container">
                 <img
                   src="/images/Ellipse 2.webp"
-                  class="h-full w-full"
+                  class="article-image"
                   alt="customers image"
                 />
               </div>
 
-              <p class="customers-name text-sm">Robert Fox</p>
+              <p class="article-customers-name">Robert Fox</p>
             </div>
           </div>
 
           <div id="article-4" class="article-style">
-            <h1 class="mb-5 text-2xl font-medium">
+            <h1 class="article-header">
               Switching to solar with this team was a smart move.<br />
               The seamless installation process and ongoing<br />
               support exceeded my expectations. Our energy bills<br />
@@ -612,21 +618,21 @@
               more sustainable future.
             </h1>
 
-            <div class="flex items-center gap-5">
-              <div class="aspect-square h-16">
+            <div class="article-image-container">
+              <div class="article-image-container">
                 <img
                   src="/images/Ellipse 2.webp"
-                  class="h-full w-full"
+                  class="article-image"
                   alt="customers image"
                 />
               </div>
 
-              <p class="customers-name text-sm">Robert Fox</p>
+              <p class="article-customers-name">Robert Fox</p>
             </div>
           </div>
 
           <div id="article-5" class="article-style">
-            <h1 class="mb-5 text-2xl font-medium">
+            <h1 class="article-header">
               Switching to solar with this team was a smart move.<br />
               The seamless installation process and ongoing<br />
               support exceeded my expectations. Our energy bills<br />
@@ -634,16 +640,16 @@
               more sustainable future.
             </h1>
 
-            <div class="flex items-center gap-5">
-              <div class="aspect-square h-16">
+            <div class="article-image-container">
+              <div class="article-image-container">
                 <img
                   src="/images/Ellipse 2.webp"
-                  class="h-full w-full"
+                  class="article-image"
                   alt="customers image"
                 />
               </div>
 
-              <p class="customers-name text-sm">Robert Fox</p>
+              <p class="article-customers-name">Robert Fox</p>
             </div>
           </div>
         </article>
@@ -723,7 +729,7 @@
         </div>
 
         <div
-          class="absolute left-[8%] top-[30%] flex h-10 w-10 items-center justify-center rounded-full bg-white text-3xl"
+          class="fadeIn pointer-events-none absolute left-[8%] top-[30%] flex h-10 w-10 items-center justify-center rounded-full bg-white text-3xl"
         >
           <svg
             width="12"
@@ -756,7 +762,7 @@
         </div>
 
         <div
-          class="absolute left-1/2 top-[90%] z-50 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-lg bg-primaryBlue px-8 py-12"
+          class="fadeIn absolute left-1/2 top-[90%] z-50 flex w-11/12 origin-center -translate-x-1/2 items-center justify-between rounded-lg bg-primaryBlue px-8 py-12"
         >
           <p class="text-2xl text-white">
             Experience the Power of Solar.<br />
@@ -790,72 +796,79 @@
         class="relative w-full space-y-40 overflow-y-hidden bg-white px-16 pb-8 pt-40"
       >
         <div class="z-30 flex justify-between text-primaryBlue">
-          <p class="basis-1/2">
+          <p class="fadeIn basis-1/2">
             We're dedicated to making solar energy accessible,<br />
             affordable, and seamless.
           </p>
 
           <div class="flex gap-x-10">
             <ul class="space-y-4">
-              <li>
-                <h2 class="font-semibold">Links</h2>
+              <li class="fadeIn">
+                <h2 class="footer-links-header">Links</h2>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">Home</a>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">Our Service</a>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">About Us</a>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">Shop</a>
               </li>
             </ul>
 
             <ul class="space-y-4">
-              <li>
-                <h2 class="font-semibold">Social</h2>
+              <li class="fadeIn">
+                <h2 class="footer-links-header">Social</h2>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">Facebook</a>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">Instagram</a>
               </li>
 
-              <li>
+              <li class="fadeIn">
                 <a href="#" class="nav-link">Linked In</a>
               </li>
             </ul>
           </div>
 
-          <address class="flex flex-col space-y-4 not-italic">
-            <a href="mailto: Contact@ecosun@email.com" class="nav-link">
-              Contact@ecosun.com</a
-            >
-            <a href="tel: (307) 555-0133" class="nav-link">(307) 555-0133</a>
+          <ul class="space-y-4">
+            <li class="fadeIn">
+              <a href="mailto: Contact@ecosun@email.com" class="nav-link">
+                Contact@ecosun.com</a
+              >
+            </li>
 
-            <p>4517 Washington Ave. Manchester, <br />Kentucky 39495</p>
-          </address>
+            <li class="fadeIn">
+              <a href="tel: (307) 555-0133" class="nav-link">(307) 555-0133</a>
+            </li>
+
+            <li class="fadeIn">
+              <p>4517 Washington Ave. Manchester, <br />Kentucky 39495</p>
+            </li>
+          </ul>
         </div>
 
         <div
           class="relative z-30 flex justify-between bg-transparent capitalize text-primaryBlue"
         >
-          <p>©All right reserved • Augustine Ifenna</p>
+          <p class="fadeIn">©All right reserved • Augustine Ifenna</p>
 
-          <p class="capitalize">2023 Terms and conditions</p>
+          <p class="fadeIn capitalize">2023 Terms and conditions</p>
         </div>
 
-        <div class="absolute bottom-0 left-1/2 w-[90%] -translate-x-1/2">
+        <div class="fadeIn absolute bottom-0 left-1/2 w-[90%] -translate-x-1/2">
           <svg
             viewBox="0 0 1434 230"
             fill="none"
