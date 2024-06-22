@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-    fontFamily: { sans: ['"Poppins", sans-serif'] },
+    fontFamily: { sans: ['"Helvetica", sans-serif'] },
     extend: {
       colors: {
         primaryBlue: "#2f4858",

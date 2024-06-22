@@ -13,7 +13,8 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 class Page {
-  fadeInElements = document.querySelectorAll(".fadeIn");
+  scaleInElements = document.querySelectorAll(".scaleInAnim");
+  fadeInElements = document.querySelectorAll(".fadeInAnim");
 
   navbar = document.querySelector("#navbar");
   heroSection = document.querySelector("#hero");
@@ -27,23 +28,34 @@ class Page {
 
   shopSect = document.querySelector("#shop");
   productCatalog = this.shopSect.querySelector("#product-catalog");
-  catalogLeftArrow = this.shopSect.querySelector("#scroll-left-btn");
-  catalogRightArrow = this.shopSect.querySelector("#scroll-right-btn");
+  catalogArrows = this.shopSect.querySelectorAll(".catalog-arrow");
 
   testimonialSect = document.querySelector("#testimonial");
   testimonialCustomers =
     this.testimonialSect.querySelector("#testimonial-info");
+  testimonialInner = document.querySelector("#testimonial-inner");
   testimonialDots = this.testimonialSect.querySelectorAll(".dot");
-  testimonialLeftArrow = this.testimonialSect.querySelector(".l-arrow");
-  testimonialRightArrow = this.testimonialSect.querySelector(".r-arrow");
+  testimonialArrows =
+    this.testimonialSect.querySelectorAll(".testimonial-arrow");
   currentTestimonialInView = 1;
+
+  intervalId;
 
   constructor() {
     //scroll right every 3 seconds
-    this.intervalId = setInterval(
-      this.scrollTestimonial.bind(this, "right"),
-      3500,
-    );
+    this.scrollTestimonialInterval();
+
+    //when the mouse enters the inner testimonial
+    //stop the automatic scrolling
+    this.testimonialInner.addEventListener("mouseenter", () => {
+      clearInterval(this.intervalId);
+    });
+
+    //when the mouse leaves
+    //start auto scrolling again
+    this.testimonialInner.addEventListener("mouseleave", () => {
+      this.scrollTestimonialInterval();
+    });
 
     //when a dot is clicked, scroll the associated article into view
     this.testimonialDots.forEach((dot, i) => {
@@ -75,6 +87,13 @@ class Page {
       });
     });
 
+    this.testimonialArrows.forEach((c) => {
+      c.addEventListener(
+        "click",
+        this.scrollTestimonial.bind(this, c.dataset.scroll),
+      );
+    });
+
     //if anywhere on services is clicked
     //close all the open details except the one that was clicked
 
@@ -88,27 +107,18 @@ class Page {
       });
     });
 
-    this.catalogRightArrow.addEventListener(
-      "click",
-      this.scrollCatalog.bind(this, "right"),
-    );
-
-    this.catalogLeftArrow.addEventListener(
-      "click",
-      this.scrollCatalog.bind(this, "left"),
-    );
-
-    this.testimonialRightArrow.addEventListener(
-      "click",
-      this.scrollTestimonial.bind(this, "right"),
-    );
-
-    this.testimonialLeftArrow.addEventListener(
-      "click",
-      this.scrollTestimonial.bind(this, "left"),
-    );
+    this.catalogArrows.forEach((c) => {
+      c.addEventListener(
+        "click",
+        this.scrollCatalog.bind(this, c.dataset.scroll),
+      );
+    });
 
     this.heroAnim();
+
+    this.scaleInElements.forEach((c) => {
+      this.scaleIn(c);
+    });
 
     this.fadeInElements.forEach((c) => {
       this.fadeIn(c);
@@ -136,12 +146,14 @@ class Page {
   }
 
   scrollTestimonial(dir) {
+    const width = this.testimonialCustomers.clientWidth;
+
     //if the user clicked right and we have not reached the end
     //go forward one div
     dir === "right" && this.currentTestimonialInView <= 5
       ? (this.currentTestimonialInView++,
         this.testimonialCustomers.scrollBy({
-          left: this.testimonialCustomers.clientWidth,
+          left: width,
           behavior: "smooth",
         }))
       : null;
@@ -151,7 +163,7 @@ class Page {
     dir === "right" && this.currentTestimonialInView > 5
       ? ((this.currentTestimonialInView = 1),
         this.testimonialCustomers.scrollBy({
-          left: -this.testimonialCustomers.clientWidth * 5,
+          left: -width * 5,
           behavior: "smooth",
         }))
       : null;
@@ -161,7 +173,7 @@ class Page {
     dir === "left" && this.currentTestimonialInView >= 1
       ? (this.currentTestimonialInView--,
         this.testimonialCustomers.scrollBy({
-          left: -this.testimonialCustomers.clientWidth,
+          left: -width,
           behavior: "smooth",
         }))
       : null;
@@ -171,7 +183,7 @@ class Page {
     dir === "left" && this.currentTestimonialInView < 1
       ? ((this.currentTestimonialInView = 5),
         this.testimonialCustomers.scrollBy({
-          left: this.testimonialCustomers.clientWidth * 5,
+          left: width * 5,
           behavior: "smooth",
         }))
       : null;
@@ -182,6 +194,13 @@ class Page {
         ? c.classList.add("bg-primaryBlue")
         : c.classList.remove("bg-primaryBlue");
     });
+  }
+
+  scrollTestimonialInterval() {
+    this.intervalId = setInterval(
+      this.scrollTestimonial.bind(this, "right"),
+      2500,
+    );
   }
 
   heroAnim() {
@@ -199,7 +218,7 @@ class Page {
     });
   }
 
-  fadeIn(element) {
+  scaleIn(element) {
     gsap.from(element, {
       opacity: 0,
       scale: 0,
@@ -211,6 +230,20 @@ class Page {
         start: "top bottom",
         end: "bottom bottom",
         scrub: 3,
+      },
+    });
+  }
+
+  fadeIn(element) {
+    gsap.from(element, {
+      opacity: 0,
+      ease: "power1.inOut",
+
+      scrollTrigger: {
+        trigger: element,
+        start: "top bottom",
+        end: "center bottom",
+        scrub: 5,
       },
     });
   }
