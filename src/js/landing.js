@@ -1,6 +1,7 @@
 import Lenis from "@studio-freight/lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis({ duration: 5 });
@@ -19,7 +20,8 @@ class Page {
   navbar = document.querySelector("#navbar");
   heroSection = document.querySelector("#hero");
 
-  missionArticle = document.querySelector("#mission");
+  missionText = document.querySelector("#mission-text");
+  missionTextChars = new SplitType(this.missionText, { types: "chars" });
 
   stats = document.querySelector("#stats");
 
@@ -42,6 +44,10 @@ class Page {
   intervalId;
 
   constructor() {
+    this.heroAnim();
+
+    this.missionAnim();
+
     //scroll right every 3 seconds
     this.scrollTestimonialInterval();
 
@@ -113,8 +119,6 @@ class Page {
         this.scrollCatalog.bind(this, c.dataset.scroll),
       );
     });
-
-    this.heroAnim();
 
     this.scaleInElements.forEach((c) => {
       this.scaleIn(c);
@@ -215,6 +219,20 @@ class Page {
           opacity: 0,
           stagger: 1,
         });
+    });
+  }
+
+  missionAnim() {
+    gsap.from(this.missionTextChars.chars, {
+      opacity: 0,
+      stagger: 0.85,
+
+      scrollTrigger: {
+        trigger: this.missionText,
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: 5,
+      },
     });
   }
 
