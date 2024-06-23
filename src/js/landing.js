@@ -231,7 +231,7 @@ class Page {
         trigger: this.missionText,
         start: "top bottom",
         end: "bottom bottom",
-        scrub: 5,
+        scrub: 4,
       },
     });
   }
